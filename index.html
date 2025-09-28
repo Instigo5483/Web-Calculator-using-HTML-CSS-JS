@@ -12,7 +12,7 @@
 
     <body>
         <div class="calculator-border">
-            <h1 class="text-center">Calculator</h1>
+            <h1 class="text-center"><span id="element"></span></h1>
     
             <div class="container flex flex-col mx-auto items-center">
                 <div class="row">
@@ -22,7 +22,7 @@
                 <div class="row">
                     <button class="button">C</button>
                     <button class="button">%</button>
-                    <button class="button"><span class="material-symbols-outlined" id="backspace">backspace</span></button>
+                    <button class="button" data-value="backspace"><span class="material-symbols-outlined" id="backspace">backspace</span></button>
                     <button class="button">e</button>
                 </div>
     
@@ -55,5 +55,14 @@
                 </div>
             </div>
         </div>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+          var typed = new Typed('#element', {
+            strings: ['Calculator'],
+            typeSpeed: 50,
+            showCursor: false
+          });
+        </script>
     </body>
 </html>
